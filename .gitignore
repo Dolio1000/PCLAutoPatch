@@ -1,0 +1,41 @@
+# ---------------------------------------------------------------------------
+# Binary artifacts are intentionally NOT tracked.
+#
+#   1. pclautopatch.exe              - build output of pclautopatch.cpp
+#   2. Plain Craft Launcher 2.exe    - upstream PCL binary (redistributable
+#                                      only from official sources)
+#   3. Plain Craft Launcher 2.autopatched.exe - patched output produced by
+#                                      the tool; must not be distributed
+# ---------------------------------------------------------------------------
+
+*.exe
+
+# Explicit entries, so the intent survives even if the pattern above changes.
+/pclautopatch.exe
+/Plain Craft Launcher 2.exe
+/Plain Craft Launcher 2.autopatched.exe
+
+# Build / editor / OS noise
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.pdb
+*.ilk
+*.idb
+*.exp
+*.user
+.vs/
+.vscode/
+.idea/
+*.swp
+*~
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Local scratch
+/out/
+/tmp/
+*.log

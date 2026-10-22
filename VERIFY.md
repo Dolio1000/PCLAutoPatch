@@ -272,7 +272,7 @@ clause flags=0x2  try=(39,845)   handler=(884,10)   cls=0x00000000   finally
 ### 6.4 `Save_Click`（新方法体 file off `0x005B41E4`，fat header 12 字节）
 
 ```text
-codesize = 221 (0xDD)
+codesize = 209 (0xD1)   （算上 12 字节 fat header 共 221 字节）
 maxstack = 16
 localSig = 0x00000000（与原方法一致，无局部变量）
 ```
@@ -305,7 +305,7 @@ IL[0x041..0x06D]  整合包分支
   28 8E 06 00 06    call PCL.PageDownloadResourceDetail::Install_Click
   2A                ret
 
-IL[0x06E..0x0DC]  原方法体（0x63 字节，逐字节原样保留）
+IL[0x06E..0x0D0]  原方法体（0x63 字节，逐字节原样保留）
 ```
 
 分支目标复核（按字节手算）：
@@ -370,7 +370,7 @@ IL_00CA  MethodDef 0x06001143  ModBase.RunInNewThread        3 参数 / static /
 | --- | --- | --- |
 | 原版 `Save_Click`（99 字节） | 通过 | 9（= 声明的 `maxstack`） |
 | 修正前的补丁方法体（204 字节） | **报错**：`argument 1 has type 0x00000000 but the callee declares 0x02000098` | — |
-| 当前补丁方法体（221 字节） | 通过 | 9 |
+| 当前补丁方法体（IL 209 字节） | 通过 | 9 |
 
 即补丁后的方法体与原方法体的栈纪律完全一致；声明的 `MaxStack = 16`
 远大于实际需求 9。

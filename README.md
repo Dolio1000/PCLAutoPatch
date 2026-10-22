@@ -380,7 +380,7 @@ finally handler 偏移；`Save_Click` 的 RVA / code size / 确实调用了一�
 | --- | --- | --- | --- | --- |
 | `LoaderInit` | `0x06000513` | `0x0002DEB4` | `0x5E` | `0x33`（原地） |
 | `ModpackInstall(String,String,String)` | `0x060001F0` | `0x00012110` | `0x2EF` | `0x380`（搬迁） |
-| `Save_Click(Object,RoutedEventArgs)` | `0x0600068F` | `0x000374F8` | `0x63` | `0xDD`（搬迁） |
+| `Save_Click(Object,RoutedEventArgs)` | `0x0600068F` | `0x000374F8` | `0x63` | `0xD1`（搬迁） |
 | `Install_Click(Object,RoutedEventArgs)` | `0x0600068E` | `0x000371E0` | `0x2EE` | 不变（原本完整） |
 
 ### 9.3 补丁用到的 token
